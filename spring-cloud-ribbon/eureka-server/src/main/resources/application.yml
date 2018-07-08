@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: EUREKA-SERVER1  # name必须为大写，否则在消费时通过这个name找不到provider
+
+server:
+  port: 8760
+
+eureka:
+  instance:
+    # 如果hostname写成localhost会相互发现不了，集群中hostname不能一样
+    hostname: eureka-server1
+  server:
+    # 只能在开发环境关闭
+    enable-self-preservation: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
