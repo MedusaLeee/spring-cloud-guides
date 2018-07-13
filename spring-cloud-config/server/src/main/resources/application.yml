@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MedusaLeee/spring-cloud-config-repo-demo.git
+          # searchPaths: repo  # 指定扫描仓库下的指定目录
+          username: xxxxx
+          password: xxx
+server:
+  port: 7080
